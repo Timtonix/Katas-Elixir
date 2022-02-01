@@ -47,9 +47,9 @@ defmodule SimpleCalculatorTest do
 
     # 5.
     test "add/1 should Allow the add method to handle different delimiters" do
-      assert SimpleCalculator.add("//|1|1|1") == 3
+      assert SimpleCalculator.add("//|\n1|1|1") == 3
 
-      assert SimpleCalculator.add("//;3;7\n3,4") == 17
+      assert SimpleCalculator.add("//;\n3;7;3;4") == 17
     end
   end
 end
