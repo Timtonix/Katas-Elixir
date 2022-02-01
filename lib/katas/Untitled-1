@@ -1,0 +1,14 @@
+"""
+ if String.starts_with?(nb_string, "//") do
+  separator = String.at(nb_string, 2)
+  nb_string = String.replace(nb_string, "//#{separator}", "")
+  nb_string = String.replace(nb_string, separator, ",")
+  nb_string
+  |> String.split([",", "\n"])
+  |> Enum.reduce(0, fn x, acc -> String.to_integer(x) + acc end)
+else
+nb_string
+|> String.split([",", "\n"])
+|> Enum.reduce(0, fn x, acc -> String.to_integer(x) + acc end)
+end
+"""
