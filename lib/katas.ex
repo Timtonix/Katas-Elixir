@@ -1,3 +1,2 @@
 defmodule Katas do
-
 end

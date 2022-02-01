@@ -1,5 +1,7 @@
 defmodule FizzBuzzTest do
   use ExUnit.Case
+  @moduletag :fizz_buzz
+
   test "FizzBuzz.run/1 should accepts a number as input and returns it as a String." do
     assert FizzBuzz.run(13) == "13"
 
