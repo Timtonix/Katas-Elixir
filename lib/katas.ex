@@ -1,2 +1,0 @@
-defmodule Katas do
-end
