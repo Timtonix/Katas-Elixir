@@ -1,0 +1,97 @@
+"""
+ if String.starts_with?(nb_string, "//") do
+  separator = String.at(nb_string, 2)
+  nb_string = String.replace(nb_string, "//#{separator}", "")
+  nb_string = String.replace(nb_string, separator, ",")
+  nb_string
+  |> String.split([",", "\n"])
+  |> Enum.reduce(0, fn x, acc -> String.to_integer(x) + acc end)
+else
+nb_string
+|> String.split([",", "\n"])
+|> Enum.reduce(0, fn x, acc -> String.to_integer(x) + acc end)
+end
+"""
+
+
+
+"""
+defmodule NegativeNumberError do
+  def exception(value) do
+    msg = "did not get what was expected, got: {inspect(value)}"
+    %NegativeNumberError{message: msg}
+  end
+end
+"""
+"""
+    if String.starts_with?(string, "_\n") do
+      Sting.at(string, 0)
+    else
+      #Make default separator
+      [",", "\n"]
+    end
+
+    if String.starts_with?(nb_string, "//") do
+      list = String.split(nb_string, @separators)
+      list = List.delete_at(list, 0)
+      [Enum.at(list, 0), "\n"]
+    else
+      [",", "\n"]
+    end
+
+
+
+    #Génération d'erreurs
+  defp handle_string(string, separator) do
+    cond do
+      String.contains?(string, ["\n,", ",\n"]) ->
+        raise ComaError
+
+      String.ends_with?(string, separator) ->
+        raise EndLineError
+
+      separator != [",", "\n"] and String.contains?(string, ",") ->
+        raise SeparatorError
+
+      true -> string
+    end
+  end
+
+  #Supprimer la partie utilisée afin de connaitre le séparateur
+  defp trim_string(nb_string, separator) do
+    if String.starts_with?(nb_string, separator) do
+      nb_string = String.replace(nb_string, "{List.to_string(separator)}", "")
+    else
+      nb_string
+    end
+  end
+    """
+
+    """
+    defp know_sep(string) do
+      separator = Enum.at(nb_string, String.split([",", "\n"]), 0)
+      if String.contains?(string, is_integer(separator)) do
+
+      end
+    end
+  """
+
+
+
+
+  """
+    if is_integer_string?(first) do
+      number + 1
+      if number >= 2 do
+        true
+      else
+        check_numbers(List.delete(list, first), number)
+      end
+    else
+      if list != [] do
+        check_numbers(List.delete(list, first), number)
+      else
+        false
+      end
+    end
+    """
